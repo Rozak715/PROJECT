@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int jumlah;
+    string kata = "ITBStikomBali";
+    string tambahan = kata;
+    cout << "Masukkan Jumlah : ";
+    cin >> jumlah;
+
+        while (kata.length() < jumlah) {
+            kata += tambahan;
+
+        }
+            for (int i = jumlah; i>=0; i--) {
+
+                cout << kata.substr(0, i) << endl;
+            }
+        return 0;
+}
