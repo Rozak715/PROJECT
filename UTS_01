@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int nilai, jumlah = 0, nilai_terbesar, nilai_terkecil;
+    float rata_rata;
+
+    // Meminta input nilai pertama
+    cout << "Masukkan nilai ke-1: ";
+    cin >> nilai;
+
+    // Inisialisasi nilai pertama sebagai nilai terbesar dan terkecil
+    nilai_terbesar = nilai;
+    nilai_terkecil = nilai;
+    jumlah += nilai;
+
+    // Perulangan untuk input nilai ke-2 sampai ke-20
+    for (int i = 2; i <= 20; i++) {
+        cout << "Masukkan nilai ke-" << i << ": ";
+        cin >> nilai;
+        jumlah += nilai;
+
+        // Menentukan nilai terbesar
+        if (nilai > nilai_terbesar) {
+            nilai_terbesar = nilai;
+        }
+
+        // Menentukan nilai terkecil
+        if (nilai < nilai_terkecil) {
+            nilai_terkecil = nilai;
+        }
+    }
+
+    // Menghitung rata-rata nilai
+    rata_rata = static_cast<float>(jumlah) / 20;
+
+    // Menampilkan hasil
+    cout << "Jumlah nilai: " << jumlah << endl;
+    cout << "Rata-rata nilai: " << rata_rata << endl;
+    cout << "Nilai terbesar: " << nilai_terbesar << endl;
+    cout << "Nilai terkecil: " << nilai_terkecil << endl;
+
+    return 0;
+}
